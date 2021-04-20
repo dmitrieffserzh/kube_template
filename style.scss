@@ -3,6 +3,21 @@
 @import "scss/modules";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;display=swap&amp;subset=cyrillic");
 
+
+/*
+  MAIN STYLES
+ -------------------------------------------------------------------------------------------------------------------- */
+* {
+  outline: none !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: geometricPrecision !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+}
+
 html,
 body {
   margin: 0;
@@ -13,11 +28,12 @@ body {
   font-family: 'Montserrat', sans-serif !important;
   font-size: 1rem;
   color: #343434;
-  background: #f8fbff;
+  //background: #f8fbff;
+  background: #F8F9FB;
 }
 
 /* GRID
-********************************************************************************************************************* */
+ -------------------------------------------------------------------------------------------------------------------- */
 .is-container {
   max-width: 75rem;
   margin: 0 auto;
@@ -30,18 +46,56 @@ body {
 }
 
 /* HEADER
-********************************************************************************************************************* */
+ -------------------------------------------------------------------------------------------------------------------- */
 .header {
   position: fixed;
   z-index: 100;
   top: 0;
   right: 0;
   left: 0;
-  padding: 1rem 0;
+  padding: .5rem 0;
   background: #fff;
-  box-shadow: 0 0 3rem 0 rgba(0, 55, 255, .1);
+  box-shadow: 0 0 3rem 0 rgba(0, 0, 0, .05);
 }
+
+
+
+
+.footer {
+  min-height: 400px;
+  background: #f0f6f6;
+}
+
+/* MAIN MENU
+ -------------------------------------------------------------------------------------------------------------------- */
+.main-menu {
+  float: right;
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__item {
+    display: inline-block;
+  }
+  &__link {
+    display: block;
+    padding: 0 .5rem;
+    color: #111113;
+    font-size: .8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 2.5rem;
+    transition: color .3s Linear;
+    &:hover {
+      color: #FF0849;
+    }
+  }
+}
+
 .menu-button {
+  display: none;
   float: right;
   border: none;
   padding: .5rem;
@@ -59,10 +113,20 @@ body {
 
 
 
-.footer {
-  min-height: 400px;
-  background: #f0f6f6;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -113,5 +177,20 @@ body {
         transition: color .3s Linear;
       }
     }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .main-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 105vh;
+    background: #fff;
+    box-shadow: 0 0 3rem 0 rgb(0, 0, 0, .1);
+  }
+  .menu-button {
+    display: block;
   }
 }
