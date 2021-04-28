@@ -183,14 +183,26 @@ body {
 
 @media screen and (max-width: 768px) {
   .main-menu {
+    float: none;
     position: absolute;
     top: 0;
-    left: 0;
+    left: -120%;
+    padding: 3rem 2rem;
     height: 105vh;
+    width: 70%;
     background: #fff;
-    box-shadow: 0 0 3rem 0 rgb(0, 0, 0, .1);
+    box-shadow: 0 0 3rem 0 rgba(0, 0, 0, .1);
+    transition: left .15s Linear;
+    &__item {
+      display: block;
+    }
   }
   .menu-button {
     display: block;
+  }
+  .menu-open {
+    & .main-menu {
+      left: 0;
+    }
   }
 }
