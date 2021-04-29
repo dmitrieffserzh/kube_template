@@ -46,6 +46,7 @@ body {
   padding: 0 1rem;
   @include make-container-column();
 }
+
 .section {
   padding: 3rem 0;
   &__title {
@@ -127,7 +128,8 @@ body {
       position: absolute;
       top: calc(-.5rem - 10px);
       left: .5rem;
-      border: 10px Solid transparent; border-bottom: 10px Solid #fff;
+      border: 10px Solid transparent;
+      border-bottom: 10px Solid #fff;
     }
   }
   &-sub__item {
@@ -165,6 +167,10 @@ body {
     width: 1.5rem;
     height: 2px;
     background: #000;
+    transition: all .15s Linear;
+    &:nth-child(2) {
+      width: .75rem;
+    }
   }
 }
 
@@ -246,11 +252,26 @@ body {
     display: block;
   }
   .menu-open {
+    overflow: hidden;
     & .main-menu {
       left: 0;
+    }
+    .menu-button {
+      &__line {
+        transition: all .15s Linear;
+        &:nth-child(2) {
+          width: .75rem;
+          background: #FF0849;
+        }
+      }
     }
   }
 }
 
-
-
+/* YANDEX MAP
+ -------------------------------------------------------------------------------------------------------------------- */
+#map {
+  width: 100%;
+  height: 450px;
+  background: url("img/map-placeholder.png") no-repeat center center #fff;
+}
