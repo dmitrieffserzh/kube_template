@@ -5019,6 +5019,7 @@ body {
 }
 .menu-button__line {
   display: block;
+  position: relative;
   margin: .25rem 0;
   width: 1.5rem;
   height: 2px;
@@ -5027,6 +5028,8 @@ body {
 }
 .menu-button__line:nth-child(2) {
   width: .75rem;
+  left: 0;
+  background: #000;
 }
 
 .social-link {
@@ -5092,6 +5095,7 @@ body {
     position: absolute;
     top: 0;
     left: -120%;
+    z-index: 100;
     padding: 3rem 2rem;
     height: 105vh;
     width: 70%;
@@ -5107,18 +5111,33 @@ body {
     display: block;
   }
 
+  .menu-overlay {
+    display: none;
+    opacity: 0;
+    transition: opacity .15s Linear;
+  }
+
   .menu-open {
     overflow: hidden;
   }
   .menu-open .main-menu {
     left: 0;
   }
-  .menu-open .menu-button__line {
-    transition: all .15s Linear;
-  }
   .menu-open .menu-button__line:nth-child(2) {
     width: .75rem;
+    left: 50%;
     background: #FF0849;
+  }
+  .menu-open .menu-overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    height: 105vh;
+    opacity: 1;
+    background: rgba(17, 24, 47, 0.5);
   }
 }
 /* YANDEX MAP

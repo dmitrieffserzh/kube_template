@@ -1,10 +1,9 @@
-$K.dom(".menu-button").on("click", function () {
+$K.dom(".menu-button, .menu-overlay").on("click", function () {
     if (!$K.dom("body").hasClass("menu-open")) {
         $K.dom("body").addClass("menu-open");
     } else {
         $K.dom("body").removeClass("menu-open");
-    }
-    ;
+    };
 });
 
 // MODAL WINDOW
@@ -35,7 +34,7 @@ function init() {
 
     var myGeoObjects = [];
     myGeoObjects = new ymaps.Placemark([55.800151390638646, 37.61400201562497], {
-        balloonContentBody: '',
+        balloonContentBody: ''
     }, {
         iconLayout: 'default#image',
         iconImageHref: 'img/point.svg',
@@ -45,7 +44,7 @@ function init() {
 
     var clusterer = new ymaps.Clusterer({
         clusterDisableClickZoom: false,
-        clusterOpenBalloonOnClick: false,
+        clusterOpenBalloonOnClick: false
     });
 
     clusterer.add(myGeoObjects);
