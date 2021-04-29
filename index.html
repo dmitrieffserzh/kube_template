@@ -15,14 +15,13 @@
 
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css"/>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 
-<body>
+<body data-kube="application">
+<!-- OLD LOGO COLOR #FF0849 -->
 <header class="header">
     <div class="is-container">
         <div class="is-row">
@@ -30,15 +29,15 @@
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40"
                      height="40"
                      viewBox="0 0 40.1 40">
-                    <polygon fill="#000" points="0,0 0,40 10.1,30 20.1,40 30.1,30 "></polygon>
-                    <polygon fill="#FF0849" points="40.1,0 40.1,40 20.1,20 "></polygon>
+                    <polygon fill="#ff0017" points="0,0 0,40 10.1,30 20.1,40 30.1,30 "></polygon>
+                    <polygon fill="#ff0017" points="40.1,0 40.1,40 20.1,20 "></polygon>
                 </svg>
                 <button class="menu-button">
                     <span class="menu-button__line"></span>
                     <span class="menu-button__line"></span>
                     <span class="menu-button__line"></span>
                 </button>
-                <button class="button" style="float: right;">Заказать звонок</button>
+                <button class="button" style="float: right;" data-type="showCallback">Заказать звонок</button>
                 <nav class="main-menu">
                     <ul class="main-menu__list">
                         <li class="main-menu__item">
@@ -61,8 +60,6 @@
     </div>
 </header>
 <main class="main">
-
-
     <section class="section section-main">
         <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -130,20 +127,20 @@
     <section class="section">
         <div class="is-container">
             <div class="is-row">
-                <div class="is-col is-70">
+                <div class="is-col is-60">
                     <h2>УЗНАЙТЕ СТОИМОСТЬ РАЗРАБОТКИ И ПРОДВИЖЕНИЯ САЙТА ДЛЯ ВАШЕГО БИЗНЕСА</h2>
 
                     <h4>НАПИШИТЕ НАМ ВАШИ ИМЯ/ТЕЛЕФОН И МЫ СВЯЖЕМСЯ В БЛИЖАЙШЕЕ ВРЕМЯ</h4>
                 </div>
-                <div class="is-col is-30">
-                    <form action="" class="form">
+                <div class="is-col is-40">
+                    <form action="" class="action-form">
                         <div class="form-item">
                             <label>Имя <span class="is-req">*</span></label>
-                            <input type="text">
+                            <input type="text" placeholder="Иван">
                         </div>
                         <div class="form-item">
                             <label>Телефон <span class="is-req">*</span></label>
-                            <input type="text">
+                            <input type="text" placeholder="+7 (XXX) XXX-XX-XX">
                         </div>
                         <div class="form-item">
                             <label class="is-checkbox" style="font-size: .75rem;"><input type="checkbox"> Я согласен на
@@ -272,14 +269,36 @@
 <footer class="footer">
 
 </footer>
-
+<div id="callback" class="is-hidden">
+    <form action="" class="callback-form">
+        <div class="form-item">
+            <label>Имя <span class="is-req">*</span></label>
+            <input type="text" placeholder="Иван">
+        </div>
+        <div class="form-item">
+            <label>Телефон <span class="is-req">*</span></label>
+            <input type="text" placeholder="+7 (XXX) XXX-XX-XX">
+        </div>
+        <div class="form-item">
+            <label class="is-checkbox" style="font-size: .75rem;"><input type="checkbox">
+                Я согласен на обработку персональных данных
+            </label>
+        </div>
+        <div class="form-item">
+            <button class="button">Отправить</button>
+        </div>
+    </form>
+</div>
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/vendor/kube.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 <script>
-    $K.init();
+    $K.init({
+        observer: true
+    });
 </script>
+
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 <script>
     window.ga = function () {

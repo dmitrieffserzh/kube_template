@@ -203,8 +203,8 @@ figure .is-video-container {
     &:hover {
         @include transition;
         opacity: 1;
-        color: #fff;
-        background-color: $color-black;
+        color: #f00;
+        //background-color: $color-black;
     }
     &.is-big {
         font-size: 14px;

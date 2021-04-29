@@ -163,7 +163,7 @@ $controls-height-small: ((32/(strip-unit($font-size-small)*16)) * 1em) !default;
 $controls-height-big: ((44/(strip-unit($font-size-big)*16)) * 1em) !default; // 44px in ems
 
 // Overlay
-$overlay-background-color: rgba($color-black, .18) !default;
+$overlay-background-color: rgba(17, 24, 47, .8) !default;
 
 
 // =HEADINGS
@@ -607,7 +607,7 @@ $modal-color-text: $color-text !default;
 $modal-header-background: none !default;
 $modal-header-padding: $space-20 $space-24 !default;
 $modal-header-font-size: 1.05rem !default;
-$modal-header-font-weight: bold !default;
+$modal-header-font-weight: 600 !default;
 $modal-header-border-bottom: 1px solid rgba($color-black, .05) !default;
 
 // body
