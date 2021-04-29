@@ -3,7 +3,6 @@
 @import "scss/modules";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;display=swap&amp;subset=cyrillic");
 
-
 /*
   MAIN STYLES
  -------------------------------------------------------------------------------------------------------------------- */
@@ -41,8 +40,21 @@ body {
   @include make-container();
 }
 
+.is-container-column {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  @include make-container-column();
+}
 .section {
   padding: 3rem 0;
+  &__title {
+    padding: 1rem 0 2rem;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .115rem;
+  }
 }
 
 /* HEADER
@@ -57,9 +69,6 @@ body {
   background: #fff;
   box-shadow: 0 0 3rem 0 rgba(0, 0, 0, .05);
 }
-
-
-
 
 .footer {
   min-height: 400px;
@@ -77,6 +86,16 @@ body {
   }
   &__item {
     display: inline-block;
+    position: relative;
+    &:hover .main-menu__link {
+      color: #FF0849;
+    }
+    &:hover .main-menu-sub__list {
+      visibility: visible;
+      top: 100%;
+      opacity: 1;
+      transition: all .15s Linear;
+    }
   }
   &__link {
     display: block;
@@ -87,7 +106,45 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     line-height: 2.5rem;
-    transition: color .3s Linear;
+    transition: color .15s Linear;
+  }
+  &-sub__list {
+    position: absolute;
+    top: 50%;
+    left: -.5rem;
+    list-style: none;
+    padding: .5rem .5rem 1rem;
+    margin: 0;
+    min-width: 250px;
+    background: #fff;
+    box-shadow: 0 0 3rem 0 rgba(0, 0, 0, .1);
+    border-radius: .25rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .15s Linear;
+    &:before {
+      content: '';
+      position: absolute;
+      top: calc(-.5rem - 10px);
+      left: .5rem;
+      border: 10px Solid transparent; border-bottom: 10px Solid #fff;
+    }
+  }
+  &-sub__item {
+    display: block;
+    position: relative;
+    border-bottom: 1px Solid rgba(0, 0, 0, .03);
+    &:last-child {
+      border: none;
+    }
+  }
+  &-sub__link {
+    display: block;
+    padding: .5rem;
+    color: #535365;
+    font-size: .8rem;
+    text-decoration: none;
+    transition: color .15s Linear;
     &:hover {
       color: #FF0849;
     }
@@ -110,26 +167,6 @@ body {
     background: #000;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .social-link {
   display: inline-block;
@@ -180,7 +217,6 @@ body {
   }
 }
 
-
 @media screen and (max-width: 768px) {
   .main-menu {
     float: none;
@@ -206,3 +242,6 @@ body {
     }
   }
 }
+
+
+
