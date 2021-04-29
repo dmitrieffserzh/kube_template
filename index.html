@@ -168,19 +168,19 @@
             <div class="is-row">
                 <div class="swiper-container testimonials is-row">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide is-text-center" style="background: #b4b7ff;">
+                        <div class="swiper-slide is-text-center" style="background: #c8cbde;">
                             <br><br><br><br><br><br><br><br><br><br>Slide 1<br><br><br><br><br><br><br><br><br><br>
                         </div>
-                        <div class="swiper-slide is-text-center" style="background: #b4b7ff;">
+                        <div class="swiper-slide is-text-center" style="background: #c8cbde;">
                             <br><br><br><br><br><br><br><br><br><br>Slide 2<br><br><br><br><br><br><br><br><br><br>
                         </div>
-                        <div class="swiper-slide is-text-center" style="background: #b4b7ff;">
+                        <div class="swiper-slide is-text-center" style="background: #c8cbde;">
                             <br><br><br><br><br><br><br><br><br><br>Slide 3<br><br><br><br><br><br><br><br><br><br>
                         </div>
-                        <div class="swiper-slide is-text-center" style="background: #b4b7ff;">
+                        <div class="swiper-slide is-text-center" style="background: #c8cbde;">
                             <br><br><br><br><br><br><br><br><br><br>Slide 4<br><br><br><br><br><br><br><br><br><br>
                         </div>
-                        <div class="swiper-slide is-text-center" style="background: #b4b7ff;">
+                        <div class="swiper-slide is-text-center" style="background: #c8cbde;">
                             <br><br><br><br><br><br><br><br><br><br>Slide 5<br><br><br><br><br><br><br><br><br><br>
                         </div>
                     </div>
@@ -190,7 +190,6 @@
                 </div>
                 <script>
                     const testimonials = new Swiper('.testimonials', {
-                        effect: 'fade',
                         slidesPerView: 2,
                         spaceBetween: 30,
                         pagination: {
@@ -200,6 +199,24 @@
                         navigation: {
                             nextEl: '.testimonials.swiper-button-next',
                             prevEl: '.testimonials.swiper-button-prev'
+                        },
+                        breakpoints: {
+                            0: {
+                                slidesPerView: 1,
+                                spaceBetween: 20
+                            },
+                            640: {
+                                slidesPerView: 1,
+                                spaceBetween: 20
+                            },
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 40
+                            },
+                            1024: {
+                                slidesPerView: 2,
+                                spaceBetween: 50
+                            }
                         }
                     });
                 </script>
