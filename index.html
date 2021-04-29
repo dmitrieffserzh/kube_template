@@ -87,10 +87,9 @@
                         <li class="main-menu__item">
                             <a href="#" class="main-menu__link">Услуги</a>
                             <ul class="main-menu-sub__list">
-                                <li class="main-menu-sub__item"><a href="#" class="main-menu-sub__link">Разработка</a>
-                                </li>
-                                <li class="main-menu-sub__item"><a href="#" class="main-menu-sub__link">Продвижение</a>
-                                </li>
+                                <li class="main-menu-sub__item"><a href="#" class="main-menu-sub__link">Разработка</a></li>
+                                <li class="main-menu-sub__item"><a href="#" class="main-menu-sub__link">Продвижение</a></li>
+                                <li class="main-menu-sub__item"><a href="#" class="main-menu-sub__link">Контекстная реклама</a></li>
                             </ul>
                         </li>
                         <li class="main-menu__item"><a href="#" class="main-menu__link">Примеры работ</a></li>
@@ -166,6 +165,62 @@
         <div class="is-container">
             <h2 class="section__title">Примеры работ</h2>
             <p class="section__subtitle"></p>
+        </div>
+        <div class="is-row">
+            <div class="swiper-container testimonials is-row">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide is-text-center" style="background: #fff;">
+                        <br><br><br><br><br><br><br><br><br><br>Slide 1<br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                    <div class="swiper-slide is-text-center" style="background: #fff;">
+                        <br><br><br><br><br><br><br><br><br><br>Slide 2<br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                    <div class="swiper-slide is-text-center" style="background: #fff;">
+                        <br><br><br><br><br><br><br><br><br><br>Slide 3<br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                    <div class="swiper-slide is-text-center" style="background: #fff;">
+                        <br><br><br><br><br><br><br><br><br><br>Slide 4<br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                    <div class="swiper-slide is-text-center" style="background: #fff;">
+                        <br><br><br><br><br><br><br><br><br><br>Slide 5<br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                </div>
+                <div class="swiper-pagination testimonials"></div>
+                <div class="swiper-button-prev testimonials"></div>
+                <div class="swiper-button-next testimonials"></div>
+            </div>
+            <script>
+                const testimonials = new Swiper('.testimonials', {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                    pagination: {
+                        el: '.testimonials.swiper-pagination',
+                        dynamicBullets: true
+                    },
+                    navigation: {
+                        nextEl: '.testimonials.swiper-button-next',
+                        prevEl: '.testimonials.swiper-button-prev'
+                    },
+                    breakpoints: {
+                        0: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 40
+                        },
+                        1024: {
+                            slidesPerView: 2,
+                            spaceBetween: 50
+                        }
+                    }
+                });
+            </script>
         </div>
     </section>
 
