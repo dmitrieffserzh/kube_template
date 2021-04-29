@@ -166,8 +166,8 @@
             <h2 class="section__title">Примеры работ</h2>
             <p class="section__subtitle"></p>
         </div>
-        <div class="is-row">
-            <div class="swiper-container testimonials is-row">
+        <div class="is-container">
+            <div class="swiper-container portfolio is-row">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide is-text-center" style="background: #fff;">
                         <br><br><br><br><br><br><br><br><br><br>Slide 1<br><br><br><br><br><br><br><br><br><br>
@@ -185,21 +185,21 @@
                         <br><br><br><br><br><br><br><br><br><br>Slide 5<br><br><br><br><br><br><br><br><br><br>
                     </div>
                 </div>
-                <div class="swiper-pagination testimonials"></div>
-                <div class="swiper-button-prev testimonials"></div>
-                <div class="swiper-button-next testimonials"></div>
+                <div class="swiper-pagination portfolio"></div>
+                <div class="swiper-button-prev portfolio"></div>
+                <div class="swiper-button-next portfolio"></div>
             </div>
             <script>
-                const testimonials = new Swiper('.testimonials', {
+                var portfolio = new Swiper('.portfolio', {
                     slidesPerView: 2,
                     spaceBetween: 30,
                     pagination: {
-                        el: '.testimonials.swiper-pagination',
+                        el: '.portfolio.swiper-pagination',
                         dynamicBullets: true
                     },
                     navigation: {
-                        nextEl: '.testimonials.swiper-button-next',
-                        prevEl: '.testimonials.swiper-button-prev'
+                        nextEl: '.portfolio.swiper-button-next',
+                        prevEl: '.portfolio.swiper-button-prev'
                     },
                     breakpoints: {
                         0: {
@@ -257,103 +257,48 @@
     </section>
 
     <section class="section">
-        <div class="is-container-column">
-            <div class="is-row">
-                <h2 class="section__title">Отзывы</h2>
-                <p class="section__subtitle"></p>
-            </div>
-            <div class="is-row">
-                <div class="swiper-container testimonials is-row">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide is-text-center" style="background: #fff;">
-                            <br><br><br><br><br><br><br><br><br><br>Slide 1<br><br><br><br><br><br><br><br><br><br>
-                        </div>
-                        <div class="swiper-slide is-text-center" style="background: #fff;">
-                            <br><br><br><br><br><br><br><br><br><br>Slide 2<br><br><br><br><br><br><br><br><br><br>
-                        </div>
-                        <div class="swiper-slide is-text-center" style="background: #fff;">
-                            <br><br><br><br><br><br><br><br><br><br>Slide 3<br><br><br><br><br><br><br><br><br><br>
-                        </div>
-                        <div class="swiper-slide is-text-center" style="background: #fff;">
-                            <br><br><br><br><br><br><br><br><br><br>Slide 4<br><br><br><br><br><br><br><br><br><br>
-                        </div>
-                        <div class="swiper-slide is-text-center" style="background: #fff;">
-                            <br><br><br><br><br><br><br><br><br><br>Slide 5<br><br><br><br><br><br><br><br><br><br>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination testimonials"></div>
-                    <div class="swiper-button-prev testimonials"></div>
-                    <div class="swiper-button-next testimonials"></div>
-                </div>
-                <script>
-                    const testimonials = new Swiper('.testimonials', {
-                        slidesPerView: 2,
-                        spaceBetween: 30,
-                        pagination: {
-                            el: '.testimonials.swiper-pagination',
-                            dynamicBullets: true
-                        },
-                        navigation: {
-                            nextEl: '.testimonials.swiper-button-next',
-                            prevEl: '.testimonials.swiper-button-prev'
-                        },
-                        breakpoints: {
-                            0: {
-                                slidesPerView: 1,
-                                spaceBetween: 20
-                            },
-                            640: {
-                                slidesPerView: 1,
-                                spaceBetween: 20
-                            },
-                            768: {
-                                slidesPerView: 2,
-                                spaceBetween: 40
-                            },
-                            1024: {
-                                slidesPerView: 2,
-                                spaceBetween: 50
-                            }
-                        }
-                    });
-                </script>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="section">
         <div class="is-container">
-            <form action="" class="form is-row">
-                <div class="is-row">
-                    <div class="form-item is-col">
-                        <label>City <span class="is-req">*</span></label>
-                        <input type="text">
+            <h2 class="section__title">Отзывы</h2>
+            <p class="section__subtitle"></p>
+        </div>
+        <div class="is-container">
+            <div class="swiper-container testimonials is-row">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide is-text-center" style="background: #fff;">
+                        <br><br><br><br><br><br><br><br><br><br>Slide 1<br><br><br><br><br><br><br><br><br><br>
                     </div>
-                    <div class="form-item is-col">
-                        <label>City <span class="is-desc">...</span></label>
-                        <input type="text">
-                        <div class="is-desc">...</div>
+                    <div class="swiper-slide is-text-center" style="background: #fff;">
+                        <br><br><br><br><br><br><br><br><br><br>Slide 2<br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                    <div class="swiper-slide is-text-center" style="background: #fff;">
+                        <br><br><br><br><br><br><br><br><br><br>Slide 3<br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                    <div class="swiper-slide is-text-center" style="background: #fff;">
+                        <br><br><br><br><br><br><br><br><br><br>Slide 4<br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                    <div class="swiper-slide is-text-center" style="background: #fff;">
+                        <br><br><br><br><br><br><br><br><br><br>Slide 5<br><br><br><br><br><br><br><br><br><br>
                     </div>
                 </div>
-                <div class="is-row">
-                    <div class="form-item is-col">
-                        <label>Label</label>
-                        <div class="is-append">
-                            <input type="text" name="search" placeholder="Search">
-                            <button class="button">Найти</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="is-row">
-                    <div class="form-item is-col">
-                        <button class="button">Отправить</button>
-                    </div>
-                    <br>
-                </div>
-            </form>
+                <div class="swiper-pagination testimonials"></div>
+                <div class="swiper-button-prev testimonials"></div>
+                <div class="swiper-button-next testimonials"></div>
+            </div>
+            <script>
+                const testimonials = new Swiper('.testimonials', {
+                    pagination: {
+                        el: '.testimonials.swiper-pagination',
+                        dynamicBullets: true
+                    },
+                    navigation: {
+                        nextEl: '.testimonials.swiper-button-next',
+                        prevEl: '.testimonials.swiper-button-prev'
+                    }
+                });
+            </script>
         </div>
     </section>
+
     <!--<ul class="social-link">
         <li class="social-link__item">
             <a href="#">Instagram</a>
@@ -378,6 +323,10 @@
         <div id="map"></div>
     </section>
 
+    <div class="mobile-contacts">
+        <h5>+7 (915) 455-33-99
+        <button class="button">Позвонить</button></h5>
+    </div>
 </main>
 
 <footer class="footer">

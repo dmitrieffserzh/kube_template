@@ -295,3 +295,17 @@ body {
   height: 450px;
   background: url("img/map-placeholder.png") no-repeat center center #fff;
 }
+
+/* MOBILE BOTTOM CONTACTS
+ -------------------------------------------------------------------------------------------------------------------- */
+.mobile-contacts {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  padding: .5rem;
+  background: #fff;
+  box-shadow: 0 0 3rem 0 rgba(0, 0, 0, .05);
+  text-align: center;
+}
