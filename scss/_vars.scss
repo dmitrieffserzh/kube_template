@@ -163,7 +163,7 @@ $controls-height-small: ((32/(strip-unit($font-size-small)*16)) * 1em) !default;
 $controls-height-big: ((44/(strip-unit($font-size-big)*16)) * 1em) !default; // 44px in ems
 
 // Overlay
-$overlay-background-color: rgba(17, 24, 47, .8) !default;
+$overlay-background-color: rgba(17, 24, 47, .5) !default;
 
 
 // =HEADINGS

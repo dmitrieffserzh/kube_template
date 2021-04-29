@@ -47,7 +47,7 @@
 	font-weight: $modal-header-font-weight;
     background: $modal-header-background;
 	padding: $modal-header-padding;
-	border-bottom: $modal-header-border-bottom;
+	//border-bottom: $modal-header-border-bottom;
 	text-transform: uppercase;
     &:empty {
         display: none;
